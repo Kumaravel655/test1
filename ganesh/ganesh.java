@@ -1,6 +1,25 @@
-import java.util.Scanner;
+# logesLongest Palindromic Substring
 
+# Given a string s, return the longest palindromic substring in s.
+
+ 
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+
+
+# program
+
+```java
 class Solution {
+
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;
@@ -27,17 +46,4 @@ class Solution {
         return right - left - 1;
     }
 }
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Solution solution = new Solution();
-        
-        System.out.print("Enter a string: ");
-        String input = scanner.nextLine();
-        
-        System.out.println("Longest Palindromic Substring: " + solution.longestPalindrome(input));
-        
-        scanner.close();
-    }
-}
+```
